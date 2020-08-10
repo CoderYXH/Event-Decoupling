@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: event-server
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  datasource:
+    url: jdbc:mysql//localhost:3306/event?userUnincode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 1qaz@WSX
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    publisher-returns: true
+  redis:
+    host: localhost
+    port: 6379
+    password:
+    timeout: 10000
+
+
+server:
+  port: 8080
+  servlet:
+    context-path: /event/v1
+
+
+logging:
+  file:
+    path: ../app/logs/event-server.log
+
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /api-dcs
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  type-aliases-package: com.day.event.server.entity
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: not_null
+      table-underline: true
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    jdbc-type-for-null: null

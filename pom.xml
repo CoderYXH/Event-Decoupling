@@ -20,7 +20,6 @@
         <module>event-client</module>
         <module>event-common</module>
         <module>event-server</module>
-        <module>spring-boot-starter-event</module>
     </modules>
 
     <properties>
@@ -28,6 +27,7 @@
     </properties>
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -48,6 +48,7 @@
             <artifactId>lombok</artifactId>
             <version>1.18.12</version>
         </dependency>
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
