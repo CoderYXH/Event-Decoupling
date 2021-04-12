@@ -17,6 +17,4 @@ public class EventDTO {
 
     private String message;
 
-    private  String a;
-
 }
