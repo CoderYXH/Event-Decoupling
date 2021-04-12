@@ -8,6 +8,7 @@ class EventServerApplicationTests {
 
     @Test
     void contextLoads() {
+        System.out.println("你好！！！");
     }
 
 }
